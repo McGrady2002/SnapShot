@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/fb_back"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        app:srcCompat="@mipmap/forward_left" />
+
+    <TextView
+        android:id="@+id/feed_back_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="35dp"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:textSize="20sp" />
+
+    <com.unstoppable.submitbuttonview.SubmitButton
+        android:id="@+id/btn_sub_feedback"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="30dp"
+        app:buttonColor="@android:color/darker_gray"
+        app:buttonText="提交"
+        app:buttonTextSize="20sp"
+        app:progressStyle="loading"
+        app:succeedColor="@android:color/darker_gray" />
+</LinearLayout>

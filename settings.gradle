@@ -1,0 +1,2 @@
+rootProject.name = "SnapShot"
+include ':app'

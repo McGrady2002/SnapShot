@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/feedback_toolbar"
+        android:background="#FAFAFA" />
+    <!--    <com.google.android.material.appbar.AppBarLayout-->
+    <!--        android:id="@+id/appbar"-->
+
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        >-->
+
+    <!--        <androidx.appcompat.widget.Toolbar-->
+    <!--            android:id="@+id/toolbar_feed"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:background="@color/white"-->
+    <!--            android:minHeight="?attr/actionBarSize"-->
+    <!--            android:theme="?attr/actionBarTheme"-->
+    <!--            app:popupTheme="@style/AppTheme.PopupOverlay"-->
+    <!--            app:title="">-->
+
+
+    <!--        </androidx.appcompat.widget.Toolbar>-->
+
+    <!--    </com.google.android.material.appbar.AppBarLayout>-->
+
+    <EditText
+        android:id="@+id/fed_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FAFAFA"
+        android:hint="请输入标题"
+        android:padding="20dp"
+        android:singleLine="true"
+        android:textColorHighlight="@color/background_gray"
+        android:textColorLink="@color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/fed_content"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:backgroundTint="#FAFAFA"
+        android:gravity="start|top"
+        android:hint="请输入问题描述"
+        android:inputType="textMultiLine"
+        android:padding="20dp"
+        android:textColorLink="@color/black"
+        android:textSize="16sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_pictures"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="（系统原因，当前默认只上传所选的第一张图）" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/addpicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:padding="5dp"
+            android:src="@drawable/picselector_addimg"
+            android:visibility="visible"
+            app:riv_border_color="@android:color/darker_gray"
+            app:riv_border_width="2dp"
+            app:riv_corner_radius="5dip"
+            app:riv_mutate_background="true"
+            app:riv_tile_mode="clamp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="请选择分类："
+            android:textColor="@android:color/secondary_text_light"
+            android:textSize="16sp" />
+
+        <org.angmarch.views.NiceSpinner
+            android:id="@+id/nice_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#FAFAFA"
+            android:backgroundTint="#FAFAFA"
+            android:textSize="16dp" />
+        <!--        <Spinner-->
+        <!--            android:id="@+id/spinner"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_weight="1" />-->
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_degree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:checkedButton="@id/common"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <RadioButton
+            android:id="@+id/common"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            android:text="一般"
+            android:textColorLink="#03A9F4"
+            android:theme="@style/MyRadioButton" />
+
+        <RadioButton
+            android:id="@+id/important"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="重要"
+            android:theme="@style/MyRadioButton" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/image_location"
+            android:layout_width="30dp"
+            android:layout_height="27dp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@mipmap/position" />
+
+        <TextView
+            android:id="@+id/location_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:text="所在位置"
+            android:textColorLink="@android:color/secondary_text_dark"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/choose_position"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="地图选点"
+        android:textColor="#03A9F4" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:text="TextView"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/delete"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#E85653"
+        android:gravity="center"
+        android:text="拖到此处删除"
+        android:textColor="#fff"
+        android:visibility="gone" />
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/mapview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</LinearLayout>

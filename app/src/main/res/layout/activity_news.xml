@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ 项目名：福大随手拍(SnapShot)
+  ~ 作者：张晋铭
+  ~ 类名：activity_news.xml
+  ~ 包名：C:/Users/McGrady2002/AndroidStudioProjects/SnapShot/app/src/main/res/layout/activity_news.xml
+  ~ 当前修改时间：2021年12月19日 23:55:47
+  ~ 上次修改时间：2021年12月19日 23:55:47
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.NewsActivity">
+
+</androidx.constraintlayout.widget.ConstraintLayout>

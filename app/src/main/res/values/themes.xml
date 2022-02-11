@@ -1,0 +1,33 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.SnapShot" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/teal_200</item>
+        <item name="colorOnPrimary">@color/white</item>
+<!--         Secondary brand color.-->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@android:color/holo_blue_light</item>
+        <item name="colorOnSecondary">@color/black</item>
+<!--         Status bar color.-->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowNoTitle">true</item>
+        <!--        <item name="windowActionBar">false</item>  //取消系统默认的actionBar-->
+<!--        <item name="windowNoTitle">true</item>   //取消actionBar的标题-->
+<!--        <item name="android:statusBarColor">@android:color/holo_red_light</item>-->
+        <!-- Android 6.0以上 状态栏字色和图标为浅黑色-->
+<!--        <item name="android:windowLightStatusBar">true</item>-->
+<!--        <item name="android:windowTranslucentStatus">false</item> //允许页面可以拉伸到顶部状态栏并且定义顶部状态栏透明，安卓4.4才有-->
+<!--        <item name="android:windowTranslucentNavigation">true</item> //设置虚拟键透明-->
+<!--        <item name="android:statusBarColor">@android:color/transparent</item> //设置状态栏的颜色为透明-->
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="MyRadioButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">#939292</item>
+        <item name="colorControlActivated">#03A9F4</item>
+    </style>
+
+</resources>
